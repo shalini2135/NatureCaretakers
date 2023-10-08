@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NatCaretaker.com</title>
+    <style>
+     
+        .pro{
+        color:greenyellow;
+        font-size:30px;
+        }
+          ul{
+                list-style-type: none; 
+                margin:0;
+                padding:15px;
+                margin-top:180px;
+                overflow:hidden;
+            }
+             a:link,a:visited{
+                      display:block;
+                      font-weight:bold;
+                      color:white;
+                      width:125px;
+                      text-align:center;
+                      text-decoration:none;
+                      padding:4px;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size:20px;
+                       transition:all 0.25s ease;
+            }
+           li{
+                float:right;
+             }
+           a:hover{
+                background-color: greenyellow;
+                color:darkgreen;
+                   transition:all 0.25s ease;
+            }
+                  
+          .first{   
+                   position:absolute;
+                    bottom:70px;
+                    right:16px;
+                  border:2px dotted greenyellow;
+                  border-radius:15px;
+                  padding:10px;
+                    margin:10px;  
+                  color:white;
+                   font-size:25px;
+                  
+                }
+          .back-video{
+                  position:absolute;
+                   right:0;
+                    bottom:0;
+                    z-index:-1;
+                   
+                  }
+            .join{
+               position:absolute;
+               right:16px;
+               margin-top:500px;
+               margin-right:500px;
+               color:white;
+               background-color: greenyellow;
+               width:250px;
+               Height:50px;
+               border:2px solid darkgreen;
+               border-radius:30px;
+               font-size:29px;
+               margin-top:80px;
+               font-weight:bolder;
+             }
+             .fr{
+               margin-top:50px;
+              margin-left:10px;
+              }
+              .submenu {
+                   
+                 position:absolute;
+                  visibility:hidden;
+                  z-index:1;
+                  top:80px;      
+                  }
+                li:hover ul.submenu{
+           
+                opacity:1;
+                top:80px;
+                visibility:visible;
+                 background-color: greenyellow;
+                }
+                .submenu li{
+                  float:none;
+                  width:100%;
+                    }
+                 .submenu a:hover{ 
+                   background-color:greenyellow;
+                   
+                     color:darkgreen;
+                        transition:all 0.1s ease;
+                    }
+                 
+
+  </style>
+</head>
+<body>
+    <table width="100%">
+        <tr><td><img src="logo.jpg"></td><th class="pro"><h1>NATURE <br>CARE TAKERS</h1></th>
+<td><ul>
+                 
+                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#">HELP US</a>
+                              <ul class="submenu">
+                                  <li><a href="donate.html">DONATE</a></li><hr>
+                                 <li><a href="adopt.html">ADOPT AN ACRE</a></li>
+                               </ul></li>
+<li><a href="#">ABOUT US</a>
+                            <ul class="submenu">
+                              <li><a href="mission.html">OUR MISSION</a></li><hr>
+                                 <li>    <a href="join.html">JOIN WITH US</a></li>  
+                              </ul>    
+                            </li>
+                <li><a href="Index.html">HOME</a></li>
+ 
+                </ul></td></tr>
+    </table>
+
+<video autoplay muted loop class="back-video">
+  <source src="nature.mp4.mp4" type="video/mp4">
+</video>
+<p class="first">
+LET US JOIN TOGETHER TO  <br> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  SAVE THE EARTH
+</p>
+<center><button class="join"><center><a href="support.html">SUPPORT US</a></center></button></center>
+
+<iframe src="slideshow.html" width="450px" height="330px;" frameborder="0" class="fr"></iframe>
+
+</body>
+</html>

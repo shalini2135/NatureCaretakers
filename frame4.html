@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Validation</title>
+    <style>
+        table{
+          margin-top:100px;
+          padding:20px;
+         padding-left:50px;
+         padding-right:50px;
+          border:2px solid darkgreen;
+          border-radius:50px;
+          }
+         th{
+         background-color:greenyellow;
+         color:white; 
+         font-size:30px;
+          }
+        tr,td{
+           font-size:20px;
+           text-align:center;
+           border:none;
+           color:white;
+           font-weight:bolder;
+           }
+          .bt{
+             height:40px;
+             width:150px;
+             background-color:greenyellow;
+             color:white;
+             font-size:23px;
+             font-weight:bolder;
+            }
+   </style>
+</head>
+<body>
+<center>
+    <form id="myForm">
+<table width="30%" border="1">
+              <tr><th colspan="2">Choose Amount</th></tr>
+      <tr><td>  <label>
+                 <tr><td></td></tr>
+                <tr><td></td></tr>
+                  <tr><td></td></tr>
+                <tr><td></td></tr>
+                   <tr><td></td></tr>
+                <tr><td></td></tr>
+            <tr><td><input type="radio" name="rupees" value="1000">Rs 1000<br>
+
+1/10 Acre <hr>
+        </label></td></tr>
+             
+         <tr><td>  <label>
+            <input type="radio" name="rupees" value="5000">Rs 5000<br>1/4 Acre<hr>
+        </label></td></tr>
+           
+
+         <tr><td>  <label>
+            <input type="radio" name="rupees" value="10000">Rs 10,000<br>1/2 Acre<hr>
+        </label></td></tr>
+               
+
+        <tr><td>  <label>
+            <input type="radio" name="rupees" value="50000">Rs 50,000<br>1 Acre<hr>
+        </label></td></tr>
+         
+
+         <tr><td>  <label>
+            <input type="radio" name="rupees" value="100000">Rs 1,00,000<br>2 Acres<hr>
+        </label></td></tr>
+                   
+
+         <tr><td>  <label>
+            <input type="radio" name="rupees" value="500000">Rs 5,00,000<br>5 Acres<hr>
+        </label></td></tr>
+          
+
+           <tr><td>  <label>
+            <input type="radio" name="rupees" value="1000000">Rs 10,00,000<br>10 Acres<hr>
+        </label></td></tr>        
+                  
+
+        <tr><td> <input type="button" value="Next" id="nextButton" class="bt"></td></tr>
+</table>
+    </form>
+</center>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nextButton = document.getElementById("nextButton");
+
+    nextButton.addEventListener("click", function () {
+        const radioButtons = document.querySelectorAll('input[type="radio"][name="rupees"]');
+        let isChecked = false;
+
+        radioButtons.forEach(function (radio) {
+            if (radio.checked) {
+                isChecked = true;
+            }
+        });
+
+        if (!isChecked) {
+            alert("Please select an amount for further Progress.");
+        } else {
+            // If a radio button is selected, navigate to the next page
+            window.location.href = "frame1.html";
+        }
+    });
+});
+</script>
+</body>
+</html>

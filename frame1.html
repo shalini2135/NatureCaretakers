@@ -1,0 +1,175 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       table{
+          margin-top:100px; 
+          padding:20px;
+          border-radius:50px;
+          border:2px solid darkgreen;
+          }
+        th{
+         background-color:greenyellow;
+          color:white;
+          font-size:30px;
+         }
+         td{
+           font-size:20px;
+           font-weight:bolder;
+           }
+         td{
+             border:none;
+            }
+         .bt{
+             height:40px;
+             width:150px;
+             background-color:greenyellow;
+             color:white;
+             font-size:23px;
+             font-weight:bolder;
+            }
+    </style>
+</head>
+<body>
+   <html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+  
+    <center>
+    <form id="myForm" >
+<table border="1">
+        <tr><th colspan="2">Your Information</th></tr>
+          <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+                 <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+               <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+
+       <tr><td> <label for="name">Name:</label></td>
+       <td> <input type="text" id="name" name="name" required></td></tr>
+             <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+                  <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+   
+        <tr><td> <label for="email">Email:</label></td>
+          <td> <input type="email" id="email" name="email" required></td></tr>
+              <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr> 
+
+        <tr><td> <label for="address">Address:</label></td>
+          <td> <input type="text" id="address" name="address" required></td></tr>
+               <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+
+        <tr><td> <label for="city">City:</label></td>
+          <td> <input type="text" id="city" name="city" required></td></tr>
+                  <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+
+        <tr><td> <label for="state">  State:</label></td>
+         <td>  <input type="text" id="state" name="state" required></td></tr>
+                 <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+           <tr><td></td><td></td></tr>
+
+       <tr><td ><button class="bt"><a href="frame2.html" style="text-decoration:none; color:white;">Prev</a></button></td><td> <input type="submit" value="Next" class="bt"></td></tr>
+        
+  </table>
+
+    </form></center>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const address = document.getElementById("address");
+        const city = document.getElementById("city");
+        const state = document.getElementById("state");
+
+        if (!validateName(name.value)) {
+            showError(name, "Name is required.");
+        } else {
+            clearError(name);
+        }
+
+        if (!validateEmail(email.value)) {
+            showError(email, "Email is not valid.");
+        } else {
+            clearError(email);
+        }
+
+        if (!validateRequired(address.value)) {
+            showError(address, "Address is required.");
+        } else {
+            clearError(address);
+        }
+
+        if (!validateRequired(city.value)) {
+            showError(city, "City is required.");
+        } else {
+            clearError(city);
+        }
+
+        if (!validateRequired(state.value)) {
+            showError(state, "State is required.");
+        } else {
+            clearError(state);
+            // If all fields are valid, redirect to the next page
+            window.location.href = "frame3.html";
+        }
+    });
+
+    function validateName(name) {
+        return name.trim() !== "";
+    }
+
+    function validateEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+    }
+
+    function validateRequired(value) {
+        return value.trim() !== "";
+    }
+
+    function showError(inputField, errorMessage) {
+        const parent = inputField.parentElement;
+        const errorElement = parent.querySelector(".error-message");
+        if (!errorElement) {
+            const errorDiv = document.createElement("div");
+            errorDiv.className = "error-message";
+            errorDiv.textContent = errorMessage;
+            parent.appendChild(errorDiv);
+        }
+    }
+
+    function clearError(inputField) {
+        const parent = inputField.parentElement;
+        const errorElement = parent.querySelector(".error-message");
+        if (errorElement) {
+            parent.removeChild(errorElement);
+        }
+    }
+});
+    </script>
+</body>
+</html>

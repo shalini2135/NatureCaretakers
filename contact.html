@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>Contact Us-NatCaretakeres.com</title>
+<style>
+                 .pro{
+        color:white;
+        font-size:30px;
+        }
+          ul{
+                list-style-type: none; 
+                margin:0;
+                padding:15px;
+                margin-top:180px;
+                overflow:hidden;
+            }
+             a:link,a:visited{
+                      display:block;
+                      font-weight:bold;
+                      color:white;
+                      width:125px;
+                      text-align:center;
+                      text-decoration:none;
+                      padding:4px;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size:20px;
+                       transition:all 0.25s ease;
+            }
+           li{
+                float:right;
+             }
+           a:hover{
+               background-color: rgb(135,206,235);
+                color:darkblue;
+                   transition:all 0.25s ease;
+            }
+               .submenu {
+                   
+                 position:absolute;
+                  visibility:hidden;
+                  z-index:1;
+                  top:80px;      
+                  }
+                li:hover ul.submenu{
+           
+                opacity:1;
+                top:80px;
+                visibility:visible;
+                 background-color: rgb(135,206,235);
+                }
+                .submenu li{
+                  float:none;
+                  width:100%;
+                    }
+                 .submenu a:hover{ 
+                background-color: rgb(135,206,235);
+                   
+                     color:#000080;
+                        transition:all 0.1s ease;
+                    }
+#mySidenav a {
+  position: relative;
+  left: -80px;
+  transition: 0.5s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+
+
+    .grid-container{
+        display:grid;
+        margin-top:auto;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 360px ; 
+        grid-gap:50px;
+    } 
+  .grid1{
+           
+            top:0;
+            right:0;
+           
+            height:200px;
+            margin-top:70px;
+          width:100%;
+        justify-content:center;
+ 
+    }
+    .grid2{
+           
+          
+            padding:1px;
+    }  
+
+  .fm
+{
+color:white;
+font-size:30px;
+
+}
+.for{
+
+padding:30px;
+
+}   
+.top{
+color:white;
+font-weight:bolder;
+font-size:30px;
+
+}  
+.rig{
+color:white;
+font-size:30px;
+color:white;
+}
+body{
+background-image:url(bg2.jpg);
+background-size:cover;
+ margin: 0;
+    padding: 0;
+}
+video{
+margin-top:100px;
+}
+</style>
+</head>
+<body >
+<table width="100%" >
+        <tr><td><img src="logo.jpg"></td><th class="pro"><h1>NATURE <br>CARE TAKERS</h1></th>
+<td><ul>
+                 
+                 <li><a href="contact.html">CONTACT</a></li>
+                   <li><a href="#">HELP US</a>
+                              <ul class="submenu">
+                                  <li><a href="donate.html">DONATE</a></li><hr>
+                                 <li><a href="Adopt.html">ADOPT AN ACRE</a></li></ul></li>
+                  <li><a href="#">ABOUT US</a>
+                            <ul class="submenu">
+                              <li><a href="mission.html">OUR MISSION</a></li><hr>
+                                 <li>    <a href="join.html">JOIN WITH US</a></li>  
+                              </ul>    
+                            </li>
+              
+                <li><a href="index.html">HOME</a></li>
+                </ul></td></tr>
+    </table>
+ <h1 style="color:#000039;">Contact Us</h1><hr>
+
+<div class="grid-container">
+<div class="grid2"><center><video autoplay muted loop class="back-video" width="400px" >
+  <source src="poll.mp4" type="video/mp4">
+
+     </video></center>
+</div>
+       <div class="grid1">  
+<form name="imp" class="for">    <table width="50px">
+           <tr class="fm"> <td><label for="name">Name:</label></td><td></td><td><input type="text" name="rev" ></td></tr>
+           <tr class="fm"><td><label for="email">Email:</label></td><td></td><td><input type="email" name="letter" ></td></tr>
+ <tr><td><input type="button" value="Submit" onclick="validate()" class="bt"></td></tr>
+        </table><form>
+<div class="con"><b class="top">Hours:</b><i class="rig">Monday 
+through Friday 9am – 5pm</i></div>    
+   <div class="con"><b class="top">Phone:</b><i class="rig">1111-2222</i></div>    
+     <div class="con"><b class="top">Email:</b><i class="rig">at caretakers@nature.com</i></div> 
+  <script>
+            function validate(){
+          var name=document.imp.rev.value;
+          var mail=document.imp.letter.value;
+          if(name==""||mail=="")
+          alert('enter name and mail');
+            
+          else{
+            var nam=name.split("");
+            var n=nam.length;
+            console.log(n);
+            if(n<=1)
+            alert('name should contain more than single charater');
+               
+            else{
+                var em=mail.split("@");
+                if(em[0].length<=10)
+                alert("mail id should have more than 10 characters");
+            else
+            alert('We received Your info')
+            }
+          }
+        }
+
+        </script>
+ </div>
+
+           </div>
+  
+</body>
+</html>
